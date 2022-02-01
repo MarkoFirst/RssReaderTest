@@ -52,6 +52,8 @@ class CoreDataManager: NSObject {
         
         source.id = sourceData["id"]
         source.name = sourceData["name"]
+        
+        try? self.managedObjectContext.save()
         return source
     }
 }
